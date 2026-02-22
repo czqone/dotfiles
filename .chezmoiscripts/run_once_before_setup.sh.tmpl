@@ -35,5 +35,23 @@ sudo apt-get install \
 # chsh -s $(which zsh)
 
 {{   else if eq .chezmoi.osRelease.id "arch" }}
+
+sudo pacman -Syu --noconfirm
+sudo pacman -S --noconfirm \
+    curl \
+    wget \
+    gnupg \
+    sudo \
+    ca-certificates \
+    gcc \
+    make \
+    zip \
+    unzip \
+    git \
+    neovim \
+    fzf \
+    github-cli \
+    zsh
+
 {{   end }}
 {{ end }}
